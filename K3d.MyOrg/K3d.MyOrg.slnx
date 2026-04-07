@@ -1,6 +1,9 @@
 <Solution>
+  <Project Path="K3d.MyOrg.Application.Interface/K3d.MyOrg.Application.Interface.csproj" Id="f16ed458-28f2-43fb-bebb-840640bd6987" />
   <Project Path="K3d.MyOrg.Application/K3d.MyOrg.Application.csproj" />
+  <Project Path="K3d.MyOrg.Core/K3d.MyOrg.Core.csproj" Id="25bddb9c-eee5-4cad-b2f2-9f97816afae8" />
+  <Project Path="K3d.MyOrg.DataAccess.Interface/K3d.MyOrg.DataAccess.Interface.csproj" Id="ffecc8c6-030e-43f0-8668-f4372ec645a3" />
+  <Project Path="K3d.MyOrg.DataAccess/K3d.MyOrg.DataAccess.csproj" />
   <Project Path="K3d.MyOrg.Domain/K3d.MyOrg.Domain.csproj" />
-  <Project Path="K3d.MyOrg.Infrastructure/K3d.MyOrg.Infrastructure.csproj" />
   <Project Path="MyOrg/MyOrg.csproj" />
 </Solution>

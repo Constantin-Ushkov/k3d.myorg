@@ -7,9 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\K3d.MyOrg.Application.Interface\K3d.MyOrg.Application.Interface.csproj" />
-    <ProjectReference Include="..\K3d.MyOrg.Core\K3d.MyOrg.Core.csproj" />
-    <ProjectReference Include="..\K3d.MyOrg.DataAccess.Interface\K3d.MyOrg.DataAccess.Interface.csproj" />
     <ProjectReference Include="..\K3d.MyOrg.Domain\K3d.MyOrg.Domain.csproj" />
   </ItemGroup>
 

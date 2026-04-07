@@ -32,9 +32,10 @@
             uiMainMenuStrip = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             uiQuitMenuItem = new ToolStripMenuItem();
-            uiPpenDataBaseMenuItem = new ToolStripMenuItem();
+            uiOpenDataBaseMenuItem = new ToolStripMenuItem();
             viewToolStripMenuItem = new ToolStripMenuItem();
             uiSpendingsMenuItem = new ToolStripMenuItem();
+            uiLogMenuItem = new ToolStripMenuItem();
             uiMainMenuStrip.SuspendLayout();
             SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { uiQuitMenuItem, uiPpenDataBaseMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { uiQuitMenuItem, uiOpenDataBaseMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(37, 20);
             fileToolStripMenuItem.Text = "&File";
@@ -65,30 +66,38 @@
             // uiQuitMenuItem
             // 
             uiQuitMenuItem.Name = "uiQuitMenuItem";
-            uiQuitMenuItem.Size = new Size(180, 22);
+            uiQuitMenuItem.Size = new Size(163, 22);
             uiQuitMenuItem.Text = "&Quit";
             uiQuitMenuItem.Click += uiQuitMenuItem_Click;
             // 
-            // uiPpenDataBaseMenuItem
+            // uiOpenDataBaseMenuItem
             // 
-            uiPpenDataBaseMenuItem.Name = "uiPpenDataBaseMenuItem";
-            uiPpenDataBaseMenuItem.Size = new Size(180, 22);
-            uiPpenDataBaseMenuItem.Text = "&Open DataBase...";
-            uiPpenDataBaseMenuItem.Click += uiPpenDataBaseMenuItem_Click;
+            uiOpenDataBaseMenuItem.Name = "uiOpenDataBaseMenuItem";
+            uiOpenDataBaseMenuItem.Size = new Size(163, 22);
+            uiOpenDataBaseMenuItem.Text = "&Open DataBase...";
+            uiOpenDataBaseMenuItem.Click += uiOpenDataBaseMenuItem_Click;
             // 
             // viewToolStripMenuItem
             // 
-            viewToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { uiSpendingsMenuItem });
+            viewToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { uiSpendingsMenuItem, uiLogMenuItem });
             viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             viewToolStripMenuItem.Size = new Size(44, 20);
             viewToolStripMenuItem.Text = "&View";
             // 
             // uiSpendingsMenuItem
             // 
+            uiSpendingsMenuItem.Enabled = false;
             uiSpendingsMenuItem.Name = "uiSpendingsMenuItem";
             uiSpendingsMenuItem.Size = new Size(180, 22);
-            uiSpendingsMenuItem.Text = "&Spendings...";
+            uiSpendingsMenuItem.Text = "&Spendings";
             uiSpendingsMenuItem.Click += uiSpendingsMenuItem_Click;
+            // 
+            // uiLogMenuItem
+            // 
+            uiLogMenuItem.Name = "uiLogMenuItem";
+            uiLogMenuItem.Size = new Size(180, 22);
+            uiLogMenuItem.Text = "&Log";
+            uiLogMenuItem.Click += uiLogMenuItem_Click;
             // 
             // MainForm
             // 
@@ -100,7 +109,9 @@
             IsMdiContainer = true;
             MainMenuStrip = uiMainMenuStrip;
             Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "My Organizer";
+            Shown += MainForm_Shown;
             uiMainMenuStrip.ResumeLayout(false);
             uiMainMenuStrip.PerformLayout();
             ResumeLayout(false);
@@ -113,8 +124,9 @@
         private MenuStrip uiMainMenuStrip;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem uiQuitMenuItem;
-        private ToolStripMenuItem uiPpenDataBaseMenuItem;
+        private ToolStripMenuItem uiOpenDataBaseMenuItem;
         private ToolStripMenuItem viewToolStripMenuItem;
         private ToolStripMenuItem uiSpendingsMenuItem;
+        private ToolStripMenuItem uiLogMenuItem;
     }
 }
