@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="K3d.MyOrg.Application/K3d.MyOrg.Application.csproj" />
+  <Project Path="K3d.MyOrg.Domain/K3d.MyOrg.Domain.csproj" />
+  <Project Path="K3d.MyOrg.Infrastructure/K3d.MyOrg.Infrastructure.csproj" />
+  <Project Path="MyOrg/MyOrg.csproj" />
+</Solution>
