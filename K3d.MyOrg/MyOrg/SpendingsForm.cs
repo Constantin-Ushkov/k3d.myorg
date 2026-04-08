@@ -28,31 +28,27 @@ namespace MyOrg
             if (report.CurrentYearSpendings != null)
             {
                 uiTotalSpentYearLabel.Text = report.CurrentYearSpendings.Total.ToString();
-
-                foreach (var category in report.CurrentYearSpendings.TotalByCategory)
-                {
-                    uiTotalSpentYearListBox.Items.Add(string.Format("{0}: {1}", category.Key, category.Value));
-                }
+                UpdateListBox(uiTotalSpentYearListBox, report.CurrentYearSpendings.GetTotalByCategorySortedByAmount());
             }
 
             if (report.CurrentMonthSpendings != null)
             {
                 uiTotalSpentMonthLabel.Text = report.CurrentMonthSpendings.Total.ToString();
-
-                foreach (var category in report.CurrentMonthSpendings.TotalByCategory)
-                {
-                    uiTotalSpentMonthListBox.Items.Add(string.Format("{0}: {1}", category.Key, category.Value));
-                }
+                UpdateListBox(uiTotalSpentMonthListBox, report.CurrentMonthSpendings.GetTotalByCategorySortedByAmount());
             }
 
             if (report.CurrentWeekSpendings != null)
             {
                 uiTotalSpentWeekLabel.Text = report.CurrentWeekSpendings.Total.ToString();
+                UpdateListBox(uiTotalSpentWeekListBox, report.CurrentWeekSpendings.GetTotalByCategorySortedByAmount());
+            }
+        }
 
-                foreach (var category in report.CurrentWeekSpendings.TotalByCategory)
-                {
-                    uiTotalSpentWeekListBox.Items.Add(string.Format("{0}: {1}", category.Key, category.Value));
-                }
+        private void UpdateListBox(ListBox listBox, IDictionary<uint, string> categories)
+        {
+            foreach (var category in categories)
+            {
+                listBox.Items.Add(string.Format("{0} - {1}", category.Key, category.Value));
             }
         }
     }
