@@ -13,7 +13,7 @@ namespace MyOrg
 
             _logger.Message += (sender, args) =>
             {
-                uiLogTextBox.AppendText(args.Message);
+                uiLogTextBox.AppendText(args.Message + Environment.NewLine);
             };
 
             InitializeComponent();
