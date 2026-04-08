@@ -23,7 +23,7 @@ namespace K3d.MyOrg.DataAccess
             _baseFolder = baseFolder;
             _cache = new DataCache(_logger, _baseFolder);
 
-            SpendingsDataProvider = new SpendingsDataProvider();
+            SpendingsDataProvider = new SpendingsDataProvider(_logger, _cache);
         }
 
         public void Open()

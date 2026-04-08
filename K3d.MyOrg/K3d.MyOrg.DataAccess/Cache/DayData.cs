@@ -66,7 +66,7 @@ namespace K3d.MyOrg.DataAccess.Cache
                     continue;
                 }
 
-                if (!int.TryParse(parts[1], out var amount))
+                if (!uint.TryParse(parts[1], out var amount))
                 {
                     _logger.Warning("Invalid spending amount: {0} in line: {1}.", parts[1], line);
                     continue;

@@ -4,6 +4,6 @@ namespace K3d.MyOrg.DataAccess.Interface.Spendings
 {
     public interface ISpendingsDataProvider
     {
-        SpendingsReport GetSpendingsReport(DateOnly fromDate, DateOnly toDate);
+        SpendingsReport? GetSpendingsReport(DateOnly fromDate, DateOnly toDate);
     }
 }

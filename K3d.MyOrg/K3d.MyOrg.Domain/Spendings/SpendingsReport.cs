@@ -3,12 +3,12 @@ namespace K3d.MyOrg.Domain.Spendings
 {
     public class SpendingsReport
     {
-        DateOnly FromDate { get; }
-        DateOnly ToDate { get; }
+        public DateOnly FromDate { get; set; }
+        public DateOnly ToDate { get; set; }
 
-        uint Total { get; }
-        IDictionary<string, uint> TotalByCategory { get; }
+        public uint Total { get; set; }
+        public Dictionary<string, uint> TotalByCategory { get; set; } = [];
 
-        IReadOnlyCollection<Spending> Spendings { get; }
+        public List<Spending> Spendings { get; set; } = [];
     }
 }
